@@ -1,0 +1,25 @@
+<div class="wf-container">
+  <div class="container">
+    <form [formGroup]="changeForm" >
+      <div class="form-group">
+        <div class="row">
+          <div class="col">
+            <input type="text" class="form-control text-center" [textMask]="{ mask: eurMask }" formControlName="moneyEUR" placeholder="EUR"/>
+          </div>
+          <div class="col">
+            <input type="text" class="form-control text-center" formControlName="moneyUSD" placeholder="USD" readonly/>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center">
+        <button type="submit" class="btn btn-primary" (click)="updateMoneyChange()">Calculate</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- <div>
+  <p>changeForm.value: {{ changeForm.value | json }}</p>
+  <p>changeForm.status: {{ changeForm.status }}</p>
+</div> -->
